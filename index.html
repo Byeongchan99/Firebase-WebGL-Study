@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+      <script type="module">
+          // Import the functions you need from the SDKs you need
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+          import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+          import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
+
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          const firebaseConfig = {
+              apiKey: "AIzaSyAK5mgr-C6y_rpDMMDjHv9iMcD3iPAyT6M",
+              authDomain: "fir-webgl-study-e2f03.firebaseapp.com",
+              projectId: "fir-webgl-study-e2f03",
+              storageBucket: "fir-webgl-study-e2f03.appspot.com",
+              messagingSenderId: "172619632724",
+              appId: "1:172619632724:web:066c7665aa4f3012a35dc1",
+              measurementId: "G-M4ZXK4FMPX"
+          };
+
+          // Initialize Firebase
+          const app = initializeApp(firebaseConfig);
+          const analytics = getAnalytics(app);
+          const auth = getAuth(app);
+      </script>
+
       <div id="unity-container" class="unity-desktop">
           <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
           <div id="unity-loading-bar">
@@ -118,29 +142,6 @@
 
           document.body.appendChild(script);
 
-      </script>
-      <script type="module">
-          // Import the functions you need from the SDKs you need
-          import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
-          import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
-          import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
-
-          // Your web app's Firebase configuration
-          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-          const firebaseConfig = {
-              apiKey: "AIzaSyAK5mgr-C6y_rpDMMDjHv9iMcD3iPAyT6M",
-              authDomain: "fir-webgl-study-e2f03.firebaseapp.com",
-              projectId: "fir-webgl-study-e2f03",
-              storageBucket: "fir-webgl-study-e2f03.appspot.com",
-              messagingSenderId: "172619632724",
-              appId: "1:172619632724:web:066c7665aa4f3012a35dc1",
-              measurementId: "G-M4ZXK4FMPX"
-          };
-
-          // Initialize Firebase
-          const app = initializeApp(firebaseConfig);
-          const analytics = getAnalytics(app);
-          const auth = getAuth(app);
       </script>
   </body>
 </html>
