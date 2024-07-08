@@ -8,7 +8,6 @@ namespace FirebaseWebGL.Examples.Auth
     {
         public InputField emailInput;
         public InputField passwordInput;
-
         public Text statusText;
 
         private void Start()
@@ -20,18 +19,19 @@ namespace FirebaseWebGL.Examples.Auth
             }
         }
 
-        private void DisplayError(string errortext)
+        private void DisplayError(string errorText)
         {
-            statusText.text = errortext;
+            statusText.text = errorText;
         }
 
-        private void DisplayInfo(string Infotext)
+        private void DisplayInfo(string infoText)
         {
-            statusText.text = Infotext;
+            statusText.text = infoText;
         }
 
-        // 이메일 회원가입 실행
-        public void CreateUserWithEmailAndPassword() =>
-            FirebaseAuth.CreateUserWithEmailAndPassword(emailInput.text, passwordInput.text, gameObject.name, "DisplayInfo", "DisplayError");
+        public void CreateUserWithEmailAndPassword()
+        {
+            FirebaseAuth.CreateUserWithEmailAndPassword(emailInput.text, passwordInput.text, gameObject.name, nameof(DisplayInfo), nameof(DisplayError));
+        }
     }
 }
